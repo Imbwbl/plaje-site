@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Primary Meta Tags -->
-        <title>🏖️ Plaje — Association Ludique</title>
-        <meta name="title" content="🏖️ Plaje — Association Ludique" />
+        <title>🏖️ PlaJe — Association Ludique</title>
+        <meta name="title" content="🏖️ PlaJe — Association Ludique" />
         <meta
             name="description"
-            content="Plaje - Association Ludique dédiée aux jeux de société et autres activités ludiques ! Rejoignez une association passionnée, participez à des soirées jeux, des tournois et des événements conviviaux pour tous les âges. Explorez, partagez et vivez le plaisir du jeu ensemble."
+            content="PlaJe - Association Ludique dédiée aux jeux de société et autres activités ludiques ! Rejoignez une association passionnée, participez à des soirées jeux, des tournois et des événements conviviaux pour tous les âges. Explorez, partagez et vivez le plaisir du jeu ensemble."
         />
         <meta
             name="keywords"
@@ -23,7 +23,7 @@
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://plaje.ch/" />
-        <meta property="og:title" content="🏖️ Plaje — Association Ludique" />
+        <meta property="og:title" content="🏖️ PlaJe — Association Ludique" />
         <meta
             property="og:description"
             content="Association Ludique dédiée aux jeux de société et autres activités ludiques ! Rejoignez une association passionnée, participez à des soirées jeux, des tournois et des événements conviviaux pour tous les âges. Explorez, partagez et vivez le plaisir du jeu ensemble."
@@ -46,7 +46,7 @@
         <meta property="twitter:url" content="https://plaje.ch/" />
         <meta
             property="twitter:title"
-            content="🏖️ Plaje — Association Ludique"
+            content="🏖️ PlaJe — Association Ludique"
         />
         <meta
             property="twitter:description"
@@ -90,6 +90,7 @@
             body {
                 margin: 0;
                 padding: 0;
+                padding-top: 60px;
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
@@ -126,6 +127,11 @@
             .blue-text {
                 color: #2d5aa0;
             }
+            .plaje-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .plaje-pitch {
                 font-variant: small-caps;
                 text-align: center;
@@ -139,42 +145,161 @@
                 margin: 0 auto;
                 text-align: center;
             }
+            nav {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 15px 0;
+                position: fixed;
+                top: 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #2d5aa0;
+                font-weight: 500;
+                font-size: 1rem;
+                transition: color 0.3s ease;
+            }
+            nav a:hover {
+                color: #ff69b4;
+            }
+            #dark-mode-btn {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                padding: 5px 10px;
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            #dark-mode-btn:hover {
+                transform: scale(1.2);
+            }
+            body.dark-mode {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            body.dark-mode nav {
+                background-color: rgba(40, 40, 40, 0.95);
+            }
+            body.dark-mode nav a {
+                color: #add8e6;
+            }
+            body.dark-mode nav a:hover {
+                color: #ff69b4;
+            }
+            body.dark-mode footer {
+                background-color: #1a1a1a;
+                color: #add8e6;
+            }
+            body.dark-mode .plaje-pitch {
+                color: #e0e0e0;
+            }
+            body.dark-mode .plaje-trailer {
+                color: #e0e0e0;
+            }
+            body.dark-mode .blue-text {
+                color: #add8e6;
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #add8e6;
+                padding: 10px 0;
+                text-align: center;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+                font-size: 0.85rem;
+                color: #2d5aa0;
+            }
+            footer a {
+                color: #2d5aa0;
+                text-decoration: none;
+            }
+            footer a:hover {
+                text-decoration: underline;
+            }
+            body.dark-mode footer a {
+                color: #add8e6;
+            }
+            body {
+                padding-bottom: 40px;
+            }
         </style>
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#membre">Devenir membre</a></li>
+                <li><a href="#statuts">Statuts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-btn" title="Toggle dark mode">🌙</button>
         <div>
-            <div class="plaje-text">
-                <span class="green-text">Pla</span
-                ><span class="pink-text">Je</span>
+            <div class="plaje-logo">
+                <img
+                    src="PlaJe-no-background.png"
+                    alt="Logo PlaJe"
+                />
             </div>
             <div class="plaje-pitch">
                 <span>&mdash; Association Ludique &mdash;</span>
             </div>
             <div class="plaje-trailer">
                 <p>
-                    Plaje est une association dédiée aux jeux de société et
+                    La PlaJe est une association dédiée aux jeux de société et
                     autres activités ludiques ! Rejoignez une association
                     passionnée, participez à des soirées jeux, des tournois et
                     des événements conviviaux pour tous les âges. Explorez,
                     partagez et vivez le plaisir du jeu ensemble.
                 </p>
             </div>
-            <br />
-            <img
-                src="umbrella-beach.svg"
-                alt="Umbrella on the beach"
-                class="beach-svg"
-            />
-            <br />
+
             <div class="plaje-wip">
                 <span class="blue-text">
                     <p>
                         Le site est en construction, merci de votre
                         compréhension.
                     </p>
-                    <p>info@plaje.ch</p></span
-                >
+                    <p>info@plaje.ch</p>
+                </span>
             </div>
         </div>
+        <footer>
+            <p><a href="mailto:info@plaje.ch">info@plaje.ch</a> | updated: <span id="updated">2026-01-27 | <a href="https://github.com/la-plaje/website">sources</a></span></p>
+        </footer>
+        <script>
+            // Dark mode toggle
+            const darkModeBtn = document.getElementById('dark-mode-btn');
+            const htmlElement = document.documentElement;
+            
+            // Check for saved dark mode preference
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                darkModeBtn.textContent = '☀️';
+            }
+            
+            darkModeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isNowDarkMode = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', isNowDarkMode);
+                darkModeBtn.textContent = isNowDarkMode ? '☀️' : '🌙';
+            });
+        </script>
     </body>
 </html>
