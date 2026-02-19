@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Satoshi";
+    src: "/Satoshi-Variable.ttf";
+}
+
+:root {
+    font-family: "Satoshi";
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template:
+        "header header header" 5rem
+        ". . ." 2rem
+        "main main main" auto
+        "footer footer footer" 5rem;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.logo {
+    display: grid;
+    place-content: center;
+    img {
+        height: 25rem;
+    }
+}
